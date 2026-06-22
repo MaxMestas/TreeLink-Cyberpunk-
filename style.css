@@ -1,0 +1,90 @@
+/* ==========================================
+   1. ESTILOS GLOBALES Y DEL CUERPO (BODY)
+   ========================================== */
+body {
+    background-color: #121212; /* Fondo gris oscuro (casi negro) estilo terminal */
+    font-family: 'Courier New', Courier, monospace; /* Tipografía monoespaciada tipo consola */
+    margin: 0; /* Elimina los márgenes por defecto del navegador */
+
+    /* Configuración de Flexbox para centrar la tarjeta en la pantalla */
+    display: flex;
+    justify-content: center; /* Centra el contenedor horizontalmente */
+    align-items: center;     /* Centra el contenedor verticalmente */
+    min-height: 100vh;       /* Obliga al body a medir el 100% de la altura de la pantalla */
+}
+
+/* ==========================================
+   2. CONTENEDOR PRINCIPAL (TARJETA)
+   ========================================== */
+.main-container {
+    border: 2px solid #E8FF00; /* Borde de la caja principal con tu amarillo fosforito */
+    max-width: 600px;          /* Ancho máximo de la tarjeta */
+    width: 100%;               /* Permite que sea responsiva y se adapte a pantallas chicas */
+    margin: 0 auto;            /* Asegura el centrado envoltura */
+    padding: 25px;             /* Espacio interno para que el contenido no pegue a los bordes */
+    box-sizing: border-box;    /* Crucial: incluye el padding y borde dentro del ancho total */
+    
+    /* Flexbox interno para alinear los elementos hijos en columna */
+    display: flex;
+    flex-direction: column;    /* Acomoda los elementos uno debajo del otro */
+    align-items: center;       /* Centra horizontalmente todo el contenido interno */
+}
+
+/* ==========================================
+   3. ELEMENTOS DEL PERFIL (FOTO Y TEXTOS)
+   ========================================== */
+#Image {
+    width: 120px;          /* Ancho fijo de la foto de perfil */
+    height: 120px;         /* Alto fijo de la foto de perfil */
+    object-fit: cover;     /* Corta y escala la imagen para que no se deforme */
+    border: 2px solid #E8FF00; /* Borde amarillo para la foto */
+}
+
+.title {
+    color: #E8FF00; /* Color amarillo para el título principal (MES_WT) */
+}
+
+.user {
+    color: #E8FF00; /* Color amarillo para el nombre de usuario (@mes_wt) */
+}
+
+/* Linea divisoria (por si usas etiquetas <hr>) */
+hr {
+    width: 100%;                 /* Ocupa el ancho completo del contenedor */
+    border: none;                /* Quita el borde gris por defecto del navegador */
+    border-top: 1px solid #E8FF00; /* Crea una línea delgada con tu color amarillo */
+    margin: 20px 0;              /* Separa la línea 20px arriba y abajo de otros elementos */
+}
+
+/* ==========================================
+   4. CONTENEDOR DE ENLACES Y BOTONES
+   ========================================== */
+.Links-Container {
+    width: 100%;            /* Ocupa todo el ancho disponible del contenedor principal */
+    display: flex;          /* Activa Flexbox para los botones */
+    flex-direction: column; /* Alinea los botones verticalmente, uno abajo de otro */
+    gap: 12px;              /* Deja una separación exacta de 12px entre cada botón */
+}
+
+/* Estilos base para cada enlace/caja de red social */
+.Links-Container a {
+    display: block;          /* Convierte el enlace en bloque para poder usar todo el ancho */
+    width: 100%;             /* Se estira al 100% del contenedor padre */
+    box-sizing: border-box;  /* Evita que el padding y el borde sumen tamaño extra al ancho */
+    
+    border: 2px solid #E8FF00; /* Borde amarillo de la caja */
+    background-color: transparent; /* Fondo transparente por defecto */
+    color: #E8FF00;          /* Texto en color amarillo */
+    text-decoration: none;   /* Quita el subrayado clásico de los enlaces HTML */
+    text-align: center;      /* Centra el texto dentro de la caja */
+    padding: 12px;           /* Espacio interno para que las cajas se vean altas y limpias */
+    
+    /* Efecto de transición suave para el cambio de colores al pasar el cursor */
+    transition: all 0.2s ease-in-out; 
+}
+
+/* Efecto Hover: Cambios visuales al pasar el mouse por encima del botón */
+.Links-Container a:hover {
+    background-color: #E8FF00; /* El fondo se vuelve completamente amarillo */
+    color: #121212;            /* El texto cambia a tu color oscuro para hacer contraste */
+}
